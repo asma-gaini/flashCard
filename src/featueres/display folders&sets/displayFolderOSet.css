@@ -1,0 +1,22 @@
+.folderBox {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  /* height: 50%; */
+  width: 200px;
+  background-color: #cbd5e1;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+.setBox {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  /* height: 50%; */
+  width: 150px;
+  background-color: #cbd5e1;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}

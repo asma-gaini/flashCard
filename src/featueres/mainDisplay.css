@@ -1,0 +1,21 @@
+.displayFolders {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin: 30px;
+}
+.displaySets {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin: 30px;
+}
+.header{
+    font-weight: bold;
+    font-size: 25px;
+    margin: 30px;
+}
+.hrLine{
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
