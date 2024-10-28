@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { dataInformationSet } from "../utils/constants";
 import { dataInformationFolder } from "../utils/constants";
 import FoldersItem from "./display folders&sets/FoldersItem";
@@ -13,6 +14,9 @@ function MainDisplay() {
           <FoldersItem folder={folder} key={folder.name} />
         ))}
       </div>
+      <Link to={"./createFolder"} className="createNew">
+        Create new folder
+      </Link>
 
       <hr className="hrLine" />
 
@@ -22,6 +26,9 @@ function MainDisplay() {
           <SetsItem set={set} key={set.setName} />
         ))}
       </div>
+      <Link to={"./createSet"} className="createNew">
+        Create new set
+      </Link>
     </div>
   );
 }

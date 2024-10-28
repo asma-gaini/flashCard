@@ -20,3 +20,16 @@
   margin-bottom: 50px;
   border-top: 2px solid black;
 }
+.createNew {
+  font-weight: 400;
+  font-size: 20px;
+  margin: 30px;
+  background-color: rgb(136, 242, 175);
+
+  font-weight: 400;
+  padding: 10px;
+  border-radius: 10px;
+}
+.createNew:hover {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
