@@ -21,7 +21,26 @@ function CreateSet() {
           >
             {(close) => (
               <div className="modal">
-                <div className="content">Welcome to GFG!!!</div>
+                <div className="content">
+                  <table>
+                    <thead>
+                      <tr>
+                        <th scope="col">Word</th>
+                        <th scope="col">Mean</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <input type="text" placeholder="word" />
+                        </td>
+                        <td>
+                          <input type="text" placeholder="mean" />
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
                 <div>
                   <button onClick={() => close()}>Close modal</button>
                 </div>
