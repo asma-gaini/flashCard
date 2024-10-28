@@ -1,0 +1,84 @@
+.formBox {
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  /* height: 50%; */
+  width: 50%;
+  background-color: #cbd5e1;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  /* display: grid;
+  place-content: center;
+  place-items: center; */
+}
+@media screen and (max-width: 720px) {
+  .formBox {
+    width: 80%;
+  }
+}
+.containBox {
+  /* position: absolute;
+  display: flex;
+  justify-content: center; */
+  margin-left: auto;
+  margin-right: auto;
+  padding: 5px;
+  /* padding-top: 20px;
+ padding-bottom: 20px; */
+}
+.containBox h1 {
+  font-weight: bolder;
+  font-size: 30px;
+}
+
+.containBox h4 {
+  font-weight: 700;
+  font-size: 20px;
+  padding: 5px;
+}
+.containBox input {
+  font-weight: 500;
+  padding: 5px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+.containBox input:focus {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.containBox input:focus-visible {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  outline: none !important;
+}
+.containBox select {
+  font-weight: 400;
+  padding: 5px;
+  margin-bottom: 30px;
+  border-radius: 10px;
+}
+
+.createbtn {
+  background-color: rgb(136, 242, 175);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  font-weight: 400;
+  padding: 5px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+}
+.createbtn:hover {
+  border: 1px solid black;
+}
+.addCard {
+  background-color: #f9fafb;
+  padding: 5px;
+  border-radius: 10px;
+}
+.addCard:hover {
+  /* border: 1px solid black; */
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
