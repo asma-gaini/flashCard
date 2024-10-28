@@ -1,59 +1,59 @@
+import { useState } from "react";
 import "./createFolder.css";
-import Popup from "reactjs-popup";
-import "reactjs-popup/dist/index.css";
+import AddWordTable from "./AddWordTable";
+// import Popup from "reactjs-popup";
+// import "reactjs-popup/dist/index.css";
 
 function CreateSet() {
+  const [folderName, setFolderName] = useState("");
+  const [description, setDescription] = useState("");
+  const [openTable, setOpenTable] = useState(false);
+
+  function openAddWord(e) {
+    e.preventDefault();
+    setOpenTable(true);
+  }
+
+  function closeAddWord(e) {
+    e.preventDefault();
+    setOpenTable(false);
+  }
+
   return (
-    <div className="formBox ">
-      <div className="containBox">
-        <h1>Create new set:</h1>
-        <br />
-        <form action="">
-          <h4>Folder name:</h4>
-          <input type="text" placeholder="Plaese enter folder name  " />
-          <h4>Description:</h4>
-          <input type="text" placeholder="Add description...  " />
+    <>
+      <div className="formBox ">
+        <div className="containBox">
+          <h1>Create new set:</h1>
           <br />
-          <Popup
-            trigger={<button className="addCard">Add new card</button>}
-            modal
-            nested
-          >
-            {(close) => (
-              <div className="modal">
-                <div className="content">
-                  <table>
-                    <thead>
-                      <tr>
-                        <th scope="col">Word</th>
-                        <th scope="col">Mean</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>
-                          <input type="text" placeholder="word" />
-                        </td>
-                        <td>
-                          <input type="text" placeholder="mean" />
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-                <div>
-                  <button onClick={() => close()}>Close modal</button>
-                </div>
-              </div>
-            )}
-          </Popup>
-          <br />
-          <button className="createbtn" type="submit">
-            Create set
-          </button>
-        </form>
+          <form action="">
+            <h4>Folder name:</h4>
+            <input
+              type="text"
+              placeholder="Plaese enter folder name  "
+              value={folderName}
+              onChange={(e) => setFolderName(e.target.value)}
+            />
+            <h4>Description:</h4>
+            <input
+              type="text"
+              placeholder="Add description...  "
+              value={description}
+              onChange={(e) => setDescription(e.target.value)}
+            />
+            <br />
+            <button className="addCard" onClick={openAddWord}>
+              Add new card
+            </button>
+
+            <br />
+            <button className="createbtn" type="submit">
+              Create set
+            </button>
+          </form>
+        </div>
       </div>
-    </div>
+      <AddWordTable closeAddWord={closeAddWord} openTable={openTable} />
+    </>
   );
 }
 

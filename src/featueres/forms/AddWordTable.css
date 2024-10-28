@@ -1,0 +1,47 @@
+.showPopup {
+  display: block;
+}
+.hidePopup {
+  display: none;
+}
+.bg {
+  /* width: 100%;
+  height: 100%;
+  transition: 0.2s;
+  -webkit-filter: blur(2px);
+  filter: blur(2px); */
+}
+.popup {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+.displayAddCard {
+  padding: 20px;
+  width: fit-content;
+  background-color: #a7f3d0;
+  border-radius: 10px;
+}
+.addWordBtn {
+  background-color: inherit;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 3px;
+  margin-top: 15px;
+}
+.addWordBtn:hover {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.inputBox:focus-visible {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  outline: none !important;
+}
+.inputBox {
+  padding: 3px;
+  border-radius: 6px;
+}
+.closeBtn:hover {
+  font-weight: bolder;
+}
