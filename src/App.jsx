@@ -5,6 +5,7 @@ import CreateFolder from "./featueres/forms/CreateFolder";
 import CreateSet from "./featueres/forms/CreateSet";
 import BackOfCard from "./featueres/back&front Card/BackOfCard";
 import FrontOfCard from "./featueres/back&front Card/FrontOfCard";
+import ListOfWord from "./featueres/display list/ListOfWord";
 
 const router = createBrowserRouter([
   {
@@ -15,6 +16,8 @@ const router = createBrowserRouter([
       { path: "/createSet", element: <CreateSet /> },
       { path: "/frontCard", element: <FrontOfCard /> },
       { path: "/backCard", element: <BackOfCard /> },
+      { path: "/set/:setId", element: <ListOfWord /> },
+
       // { path: "/question", element: <Question />, action: createQuestionForm },
     ],
   },

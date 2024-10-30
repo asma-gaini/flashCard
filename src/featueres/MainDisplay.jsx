@@ -23,7 +23,7 @@ function MainDisplay() {
       <h2 className="header">your sets:</h2>
       <div className="displaySets">
         {dataInformationSet.map((set) => (
-          <SetsItem set={set} key={set.setName} />
+          <SetsItem set={set} key={set.setId} />
         ))}
       </div>
       <Link to={"./createSet"} className="createNew">

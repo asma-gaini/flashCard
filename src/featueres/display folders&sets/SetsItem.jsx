@@ -4,7 +4,7 @@ import "./displayFolderOset.css";
 function SetsItem({ set }) {
   return (
     <div>
-      <Link className="setBox" to="/">
+      <Link className="setBox" to={`./set/${set.setId}`}>
         {set.setName}
       </Link>
     </div>
