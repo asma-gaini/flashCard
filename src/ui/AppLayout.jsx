@@ -6,7 +6,7 @@ function AppLayout() {
     <div className="box-border ">
       <Header />
       <div className=" ">
-        <main className=" h-screen bg-red-200 m-3 p-5">
+        <main className=" h-screen bg-red-50 m-3 p-5">
           <Outlet />
         </main>
       </div>
