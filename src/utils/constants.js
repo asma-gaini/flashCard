@@ -18,7 +18,6 @@ export const dataInformationSet = [
         song2: {
           word1: "کلمه 1",
           word2: "کلمه 2",
-          word3: "کلمه 3",
         },
       },
       {

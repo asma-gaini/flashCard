@@ -6,6 +6,7 @@ import CreateSet from "./featueres/forms/CreateSet";
 import BackOfCard from "./featueres/back&front Card/BackOfCard";
 import FrontOfCard from "./featueres/back&front Card/FrontOfCard";
 import ListOfSong from "./featueres/display list/ListOfSong";
+import ListOfWord from "./featueres/display list/ListOfWord";
 
 const router = createBrowserRouter([
   {
@@ -17,6 +18,7 @@ const router = createBrowserRouter([
       { path: "/frontCard", element: <FrontOfCard /> },
       { path: "/backCard", element: <BackOfCard /> },
       { path: "/set/:setId", element: <ListOfSong /> },
+      { path: "/set/:setId/:songName", element: <ListOfWord /> },
 
       // { path: "/question", element: <Question />, action: createQuestionForm },
     ],
