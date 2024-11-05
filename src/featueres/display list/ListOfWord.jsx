@@ -28,40 +28,64 @@ function ListOfWord() {
   //       );
   //   })
   // );
-  const S5 = dataInformationSet[id - 1].word.map((song) =>
-    Object.entries(song).map((songItem) => {
-      songItem[0] === name &&
-        Object.entries(songItem[1]).map(([word, mean]) =>
-          console.log(
-            "s5:  " +
-              [word, mean] +
-              "  / s5 wordName:  " +
-              word +
-              "  / s5 wordMean:  " +
-              mean
-          )
-        );
-    })
-  );
+  // const S5 = dataInformationSet[id - 1].word.map((song) =>
+  //   Object.entries(song).map((songItem) => {
+  //     songItem[0] === name &&
+  //       Object.entries(songItem[1]).map(([word, mean]) =>
+  //         console.log(
+  //           "s5:  " +
+  //             [word, mean] +
+  //             "  / s5 wordName:  " +
+  //             word +
+  //             "  / s5 wordMean:  " +
+  //             mean
+  //         )
+  //       );
+  //   })
+  // );
+
+  const selectedSet = dataInformationSet.find((s) => s.setId == id);
+  const selectedWord = selectedSet.word.find((w) => w.songName === songName);
+  const selectedLyrics = selectedWord[selectedWord.songName];
+
+  const parsed = Object.entries(selectedLyrics).map(([key, value]) => ({
+    key,
+    value,
+  }));
+
+  console.log({
+    dataInformationSet,
+    id,
+    parsed,
+  });
 
   return (
+    //     <div>
+    //       {dataInformationSet[id - 1].word.map((song) =>
+    //         Object.entries(song).map((songItem) => {
+    //           songItem[0] === name &&
+    //             Object.entries(songItem[1]).map(([word, mean]) => (
+    //               <p key={word}>
+    //                 wordName: {word} & wordMean: {mean}
+    //               </p>
+    //             ));
+    //         })
+    //       )}
+    // <p>{name}</p>
+    //       {/* {S5.map((word) => (
+    //         <p>
+    //           wordkey: {word[0]} & wordMean: {word[1]}
+    //         </p>
+    //       ))} */}
+    //     </div>
+
     <div>
-      {dataInformationSet[id - 1].word.map((song) =>
-        Object.entries(song).map((songItem) => {
-          songItem[0] === name &&
-            Object.entries(songItem[1]).map(([word, mean]) => (
-              <p key={word}>
-                wordName: {word} & wordMean: {mean}
-              </p>
-            ));
-        })
-      )}
-<p>{name}</p>
-      {/* {S5.map((word) => (
+      {parsed?.map((d) => (
         <p>
-          wordkey: {word[0]} & wordMean: {word[1]}
+          Key : {d.key} and value : {d.value}
         </p>
-      ))} */}
+      ))}
+      <p>{name}</p>
     </div>
   );
 }
