@@ -1,9 +1,5 @@
 function BackOfCard() {
-    return (
-        <div>
-            back of the Card
-        </div>
-    )
+  return <div>mean</div>;
 }
 
-export default BackOfCard
+export default BackOfCard;

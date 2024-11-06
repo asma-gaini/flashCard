@@ -1,5 +1,6 @@
 import { useParams } from "react-router-dom";
 import { dataInformationSet } from "../../utils/constants";
+import FrontOfCard from "../back&front Card/FrontOfCard";
 
 function ListOfWord() {
   const { setId, songName } = useParams();
@@ -80,12 +81,14 @@ function ListOfWord() {
     //     </div>
 
     <div>
-      {parsed?.map((d) => (
+      {/* {parsed?.map((d) => (
         <p>
           Key : {d.key} and value : {d.value}
         </p>
+      ))} */}
+      {parsed?.map((d) => (
+        <FrontOfCard key={d.key} word={d.key} mean={d.value} />
       ))}
-      <p>{name}</p>
     </div>
   );
 }
