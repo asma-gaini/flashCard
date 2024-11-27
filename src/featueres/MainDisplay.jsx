@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import { dataInformationSet } from "../utils/constants";
 import { dataInformationFolder } from "../utils/constants";
+import { dataInformation } from "../utils/constants";
+
 import FoldersItem from "./display folders&sets/FoldersItem";
 import SetsItem from "./display folders&sets/setsItem";
 import "./mainDisplay.css";
@@ -10,8 +12,8 @@ function MainDisplay() {
     <div className="mainDisplay">
       <h2 className="header">your folders:</h2>
       <div className="displayFolders">
-        {dataInformationFolder.map((folder) => (
-          <FoldersItem folder={folder} key={folder.name} />
+        {dataInformation.map((folder) => (
+          <FoldersItem folder={folder} key={folder.folderId} />
         ))}
       </div>
       <Link to={"./createFolder"} className="createNew">
@@ -22,9 +24,12 @@ function MainDisplay() {
 
       <h2 className="header">your sets:</h2>
       <div className="displaySets">
-        {dataInformationSet.map((set) => (
+        {/* {dataInformationSet.map((set) => (
           <SetsItem set={set} key={set.setId} />
-        ))}
+        ))} */}
+        {dataInformation.map((folder) =>
+          folder.set.map((set) => <SetsItem set={set} key={set.setId} />)
+        )}
       </div>
       <Link to={"./createSet"} className="createNew">
         Create new set

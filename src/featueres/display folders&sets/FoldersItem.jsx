@@ -4,7 +4,9 @@ import "./displayFolderOset.css";
 function FoldersItem({ folder }) {
   return (
     <div>
-      <Link className="folderBox" to="/">{folder.name}</Link>
+      <Link className="folderBox" to={`./folder/${folder.folderId}`}>
+        {folder.folderName}
+      </Link>
     </div>
   );
 }
