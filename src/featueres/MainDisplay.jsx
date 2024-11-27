@@ -28,7 +28,9 @@ function MainDisplay() {
           <SetsItem set={set} key={set.setId} />
         ))} */}
         {dataInformation.map((folder) =>
-          folder.set.map((set) => <SetsItem set={set} key={set.setId} />)
+          folder.set.map((set) => (
+            <SetsItem set={set} key={set.setId} folder={folder} />
+          ))
         )}
       </div>
       <Link to={"./createSet"} className="createNew">
